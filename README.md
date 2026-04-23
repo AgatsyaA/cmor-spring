@@ -140,19 +140,6 @@ cmor-spring/
 
 ---
 
-## 📸 Repository Snapshots
-
-### 🔹 Root Repository View
-![Root View](images/root.png)
-
-### 🔹 Supervised Learning Structure
-![Supervised](images/supervised.png)
-
-### 🔹 Unsupervised Learning Structure
-![Unsupervised](images/unsupervised.png)
-
----
-
 ## 🛠️ Tech Stack
 
 - **Language:** Python  
@@ -163,9 +150,8 @@ cmor-spring/
 
 ## 🚀 How to Use
 
-1. Clone the repository  
-2. Navigate to the project folder  
-3. Open notebooks using Jupyter  
+1. Navigate to the project folder  
+2. Open notebooks using Jupyter  
 
 ---
 
@@ -175,24 +161,3 @@ cmor-spring/
 - Implement **core ML algorithms**
 - Apply ML to **real-world problems**
 - Build foundation for **advanced AI/ML**
-
----
-
-## 🌟 Future Improvements
-
-- Add real-world datasets  
-- Model evaluation metrics  
-- Hyperparameter tuning  
-- Deployment pipelines  
-
----
-
-## ⭐ Support
-
-If you found this useful, consider giving a ⭐  
-
----
-
-## 🔥 Final Note
-
-This repository is a **practical learning resource** designed to build both **conceptual clarity and hands-on expertise in Machine Learning**.
