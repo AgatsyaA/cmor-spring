@@ -1,0 +1,139 @@
+# 📊 Machine Learning: Supervised & Unsupervised Learning
+
+![Supervised vs Unsupervised](https://www.vproexpert.com/wp-content/uploads/2020/09/supervised-and-unsupervised-1024x576.jpg)
+
+---
+
+## 📌 Overview
+
+This repository provides a structured and practical implementation of **core Machine Learning concepts**, focusing on:
+
+- **Supervised Learning**
+- **Unsupervised Learning**
+
+It bridges **theoretical understanding with hands-on implementation**, covering foundational algorithms widely used in industry and research.
+
+Machine Learning can broadly be categorized into:
+
+- **Supervised Learning** → Learning with labeled data  
+- **Unsupervised Learning** → Learning patterns from unlabeled data  
+
+---
+
+## 🧠 Supervised Learning
+
+### 🔍 What is Supervised Learning?
+
+Supervised learning is a machine learning approach where models are trained on **labeled datasets**, meaning each input has a corresponding output. The goal is to learn a mapping and make accurate predictions on unseen data.
+
+### 🎯 Key Characteristics
+
+- Uses **labeled data**
+- Learns **input → output mapping**
+- Focused on **prediction and classification**
+- Requires **data labeling**
+
+### 📊 Types of Problems
+
+**1. Classification**
+- Output is categorical  
+- Example: Spam detection, sentiment analysis  
+
+**2. Regression**
+- Output is continuous  
+- Example: House price prediction  
+
+### ⚙️ Algorithms in this Repository
+
+- Decision Tree  
+- Ensembles  
+- Gradient Descent  
+- KNN  
+- Linear Regression  
+- Logistic Regression  
+- Multilayer Perceptron  
+- Neural Networks  
+- Perceptron  
+
+### 🏭 Real-World Applications
+
+- Fraud detection  
+- Medical diagnosis  
+- Recommendation systems  
+- Demand forecasting  
+- Image and speech recognition  
+
+---
+
+## 🔍 Unsupervised Learning
+
+### 🔍 What is Unsupervised Learning?
+
+Unsupervised learning involves training models on **unlabeled data**, where the system identifies patterns, structures, and relationships without predefined outputs.
+
+### 🎯 Key Characteristics
+
+- Uses **unlabeled data**
+- Focuses on **pattern discovery**
+- No predefined outputs
+- Minimal human intervention  
+
+### 📊 Types of Problems
+
+**1. Clustering**
+- Groups similar data points  
+- Example: Customer segmentation  
+
+**2. Dimensionality Reduction**
+- Reduces number of features  
+- Example: PCA  
+
+### ⚙️ Algorithms in this Repository
+
+- DBSCAN  
+- K-Means  
+- PCA  
+
+### 🏭 Real-World Applications
+
+- Market segmentation  
+- Anomaly detection  
+- Recommendation systems  
+- Feature engineering  
+- Data compression  
+
+---
+
+## ⚖️ Supervised vs Unsupervised Learning
+
+| Feature | Supervised Learning | Unsupervised Learning |
+|--------|--------------------|----------------------|
+| Data Type | Labeled | Unlabeled |
+| Goal | Predict outcomes | Discover patterns |
+| Human Involvement | High | Low |
+| Output | Known | Unknown |
+| Examples | Regression, Classification | Clustering, PCA |
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language:** Python  
+- **Libraries:** NumPy, Pandas, Scikit-learn, Matplotlib  
+- **Tools:** Jupyter Notebook, GitHub  
+
+---
+
+## 🚀 How to Use
+
+1. Navigate to the project folder  
+2. Open notebooks using Jupyter  
+
+---
+
+## 🎯 Learning Outcomes
+
+- Understand differences between **supervised and unsupervised learning**
+- Implement **core ML algorithms**
+- Apply ML to **real-world problems**
+- Build foundation for **advanced AI/ML**
