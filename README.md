@@ -116,30 +116,6 @@ Unsupervised learning involves training models on **unlabeled data**, where the 
 
 ---
 
-## 📂 Repository Structure
-
-cmor-spring/
-
-├── Supervised Learning/
-│   ├── Decision Tree/
-│   ├── Ensembles/
-│   ├── Gradient Descent/
-│   ├── KNN/
-│   ├── Linear Regression/
-│   ├── Logistic Regression/
-│   ├── Multilayer Perceptron/
-│   ├── Neural Networks/
-│   └── Perceptron/
-
-├── Unsupervised Learning/
-│   ├── DBSCAN/
-│   ├── K-Means/
-│   └── PCA/
-
-└── README.ipynb
-
----
-
 ## 🛠️ Tech Stack
 
 - **Language:** Python  
