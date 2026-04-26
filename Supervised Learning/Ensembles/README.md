@@ -1,6 +1,8 @@
 # 🤖 Ensemble Learning: Regression & Classification
 
-<img src="https://www.ibm.com/adobe/dynamicmedia/deliver/dm-aid--fc4f06fb-b27c-424b-9180-3163e7d2825e/ensemble-learning-boosting.png" width="700" style="display:block; margin:auto;" />
+<p align="center">
+  <img src="https://www.ibm.com/adobe/dynamicmedia/deliver/dm-aid--fc4f06fb-b27c-424b-9180-3163e7d2825e/ensemble-learning-boosting.png" width="700"/>
+</p>
 
 ---
 
