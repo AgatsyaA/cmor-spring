@@ -1,55 +1,52 @@
-# 🤖 Ensemble Learning: Regression & Classification
+# Ensemble Learning: Regression and Classification
 
-<p align="center">
+<div align="center">
   <img src="https://www.ibm.com/adobe/dynamicmedia/deliver/dm-aid--fc4f06fb-b27c-424b-9180-3163e7d2825e/ensemble-learning-boosting.png" width="700"/>
-</p>
+</div>
 
 ---
 
-## 📌 Overview
+## Overview
 
-This project demonstrates practical implementations of **Ensemble Learning techniques** for both:
+This project demonstrates practical implementations of ensemble learning techniques for both regression and classification problems.
 
-- 📈 Regression Problems  
-- 🧠 Classification Problems  
-
-Ensemble learning improves **accuracy, robustness, and generalization** by combining multiple models. :contentReference[oaicite:1]{index=1}  
+Ensemble learning improves accuracy, robustness, and generalization by combining multiple models.
 
 ---
 
-## 🧠 Key Concepts
+## Key Concepts
 
-- **Bagging (Bootstrap Aggregation)** → Reduces variance  
-- **Boosting** → Sequentially corrects model errors :contentReference[oaicite:2]{index=2}  
-- **Stacking** → Combines multiple models using a meta-learner  
-
----
-
-## 📂 Project Files
-
-- `CODE Regressor.ipynb` → Ensemble models for regression  
-- `CODE Classification.ipynb` → Ensemble models for classification  
+- Bagging (Bootstrap Aggregation): Reduces variance  
+- Boosting: Reduces bias by sequential learning  
+- Stacking: Combines multiple models using a meta-learner  
 
 ---
 
-## 📊 Regression (CODE Regressor.ipynb)
+## Project Files
 
-### 🔍 Implementations:
+- `CODE Regressor.ipynb` — Ensemble methods for regression  
+- `CODE Classification.ipynb` — Ensemble methods for classification  
+
+---
+
+## Regression (CODE Regressor.ipynb)
+
+### Implementations
 - Data preprocessing  
 - Base models (Linear Regression, Decision Trees)  
 - Ensemble models:
   - Random Forest Regressor  
   - Gradient Boosting Regressor  
 
-### 📈 Metrics:
-- RMSE  
-- R² Score  
+### Evaluation Metrics
+- Root Mean Squared Error (RMSE)  
+- R-squared (R² Score)  
 
 ---
 
-## 🧠 Classification (CODE Classification.ipynb)
+## Classification (CODE Classification.ipynb)
 
-### 🔍 Implementations:
+### Implementations
 - Data preprocessing  
 - Base classifiers (Logistic Regression, Decision Tree)  
 - Ensemble models:
@@ -57,14 +54,14 @@ Ensemble learning improves **accuracy, robustness, and generalization** by combi
   - AdaBoost / Gradient Boosting  
   - Voting Classifier  
 
-### 📊 Metrics:
+### Evaluation Metrics
 - Accuracy  
-- Precision / Recall  
+- Precision and Recall  
 - Confusion Matrix  
 
 ---
 
-## ⚙️ Workflow
+## Workflow
 
 1. Load dataset  
 2. Preprocess data  
@@ -74,17 +71,17 @@ Ensemble learning improves **accuracy, robustness, and generalization** by combi
 
 ---
 
-## 📈 Why Ensemble Learning?
+## Why Ensemble Learning
 
 | Problem            | Solution                |
 |-------------------|------------------------|
-| High Variance      | Bagging                |
-| High Bias          | Boosting               |
-| Model Limitations  | Stacking               |
+| High variance      | Bagging                |
+| High bias          | Boosting               |
+| Model limitations  | Stacking               |
 
 ---
 
-## 🛠️ Tech Stack
+## Technology Stack
 
 - Python  
 - Scikit-learn  
@@ -93,7 +90,7 @@ Ensemble learning improves **accuracy, robustness, and generalization** by combi
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ```bash
 pip install numpy pandas scikit-learn matplotlib
