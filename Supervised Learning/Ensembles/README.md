@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://www.researchgate.net/profile/Haibo-He/publication/224251495/figure/fig1/AS:669039742607371@1536520464240/Illustration-of-ensemble-learning.png" width="700"/>
-</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ensemble_learning.svg/1200px-Ensemble_learning.svg.png" width="700" style="display:block; margin:auto;" />
 
 # 🤖 Ensemble Learning: Regression & Classification
 
