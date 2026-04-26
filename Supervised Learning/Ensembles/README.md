@@ -1,6 +1,6 @@
-<div align="center">
+<p align="center">
   <img src="https://miro.medium.com/v2/resize:fit:1400/1*7nZ4W9rj9xj9XK8J6X2s9A.png" width="700"/>
-</div>
+</p>
 
 # 🤖 Ensemble Learning: Regression & Classification
 
