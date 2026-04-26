@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://miro.medium.com/v2/resize:fit:1400/1*7nZ4W9rj9xj9XK8J6X2s9A.png" width="700"/>
+  <img src="https://www.researchgate.net/profile/Haibo-He/publication/224251495/figure/fig1/AS:669039742607371@1536520464240/Illustration-of-ensemble-learning.png" width="700"/>
 </p>
 
 # 🤖 Ensemble Learning: Regression & Classification
