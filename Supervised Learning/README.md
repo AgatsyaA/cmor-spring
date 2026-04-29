@@ -28,7 +28,7 @@ The objective of this section is to provide both conceptual clarity and practica
 Supervised learning aims to learn a function:
 
 <p align="center">
-  <img src="https://latex.codecogs.com/png.latex?\Large f(X)\rightarrow y" />
+  <strong>f(X) → y</strong>
 </p>
 
 Where:
