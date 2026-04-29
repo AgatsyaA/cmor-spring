@@ -127,8 +127,10 @@ Gini(S) = 1 − Σ (pᵢ)²
 
 ## References
 
-- https://www.geeksforgeeks.org/decision-tree/  
 - https://scikit-learn.org/stable/modules/tree.html  
+- https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm  
+- https://link.springer.com/book/10.1007/978-0-387-84858-7 (Elements of Statistical Learning)  
+- https://developers.google.com/machine-learning/crash-course/decision-trees  
 - https://www.ibm.com/topics/decision-trees  
 
 ---
