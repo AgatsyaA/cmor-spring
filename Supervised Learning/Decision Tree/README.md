@@ -77,9 +77,3 @@ A **Decision Tree** is a supervised machine learning algorithm used for **classi
 - Fraud detection  
 
 ---
-
-## 📌 Summary
-
-Decision Trees are a **powerful and interpretable** model that form the foundation of advanced ensemble methods like **Random Forests** and **Gradient Boosting**.
-
----
