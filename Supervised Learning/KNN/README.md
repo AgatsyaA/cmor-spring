@@ -12,8 +12,6 @@
 
 KNN is a **non-parametric, instance-based (lazy learning)** algorithm that does not build an explicit model during training. Instead, it stores the dataset and performs computation at prediction time.
 
-This project demonstrates KNN classification, where a data point is assigned a label based on the majority class among its nearest neighbors.
-
 ---
 
 ## Objective
@@ -36,85 +34,68 @@ A data point is assigned the class that is most common among its closest neighbo
 
 ## How It Works
 
-1. Choose the number of neighbors \( k \)  
+1. Choose the number of neighbors (k)  
 2. Compute distance between the new point and all training points  
-3. Select the **k closest neighbors**  
+3. Select the k closest neighbors  
 4. Apply:
-   - **Classification** → Majority vote  
-   - **Regression** → Average of neighbors  
+   - Classification → Majority vote  
+   - Regression → Average of neighbors  
 5. Assign final prediction  
 
 ---
 
 ## Distance Metrics
 
-### Euclidean Distance
+**Euclidean Distance**  
+d(x, y) = sqrt(Σ (x_i - y_i)^2)
 
-\[
-d(x, y) = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}
-\]
+**Manhattan Distance**  
+d(x, y) = Σ |x_i - y_i|
 
-### Manhattan Distance
-
-\[
-d(x, y) = \sum_{i=1}^{n} |x_i - y_i|
-\]
-
-### Minkowski Distance
-
-\[
-d(x, y) = \left( \sum_{i=1}^{n} |x_i - y_i|^p \right)^{1/p}
-\]
+**Minkowski Distance**  
+d(x, y) = (Σ |x_i - y_i|^p)^(1/p)
 
 ---
 
 ## Prediction Formulas
 
-### Classification (Majority Voting)
+**Classification (Majority Voting)**  
+ŷ = mode(y1, y2, ..., yk)
 
-\[
-\hat{y} = \text{mode}(y_1, y_2, ..., y_k)
-\]
+**Regression (Averaging)**  
+ŷ = (1/k) Σ y_i
 
-### Regression (Averaging)
-
-\[
-\hat{y} = \frac{1}{k} \sum_{i=1}^{k} y_i
-\]
-
-### Weighted KNN (Optional)
-
-\[
-\hat{y} = \frac{\sum_{i=1}^{k} w_i y_i}{\sum_{i=1}^{k} w_i}, \quad \text{where } w_i = \frac{1}{d(x, x_i)}
-\]
+**Weighted KNN (Optional)**  
+ŷ = (Σ w_i * y_i) / (Σ w_i)  
+where w_i = 1 / d(x, x_i)
 
 ---
 
 ## Methodology
 
-- **Classification by Proximity** → Majority voting among nearest neighbors  
-- **Regression via Averaging** → Mean of neighbor values  
-- **Lazy Learning** → No training phase  
-- **Local Approximation** → Decisions based on nearby points  
-- **Pattern Recognition** → Similar points cluster together  
+- Classification by proximity (majority voting)  
+- Regression via averaging  
+- Lazy learning (no training phase)  
+- Local approximation (uses nearby data points)  
+- Pattern recognition through similarity  
 
 ---
 
 ## Key Concepts
 
-- **K Value** → Number of neighbors considered  
-- **Distance Metric** → Defines similarity  
-- **Feature Scaling** → Ensures fair distance calculation  
-- **Local Decision Making** → Focus on neighborhood patterns  
+- K value → Number of neighbors  
+- Distance metric → Defines similarity  
+- Feature scaling → Important for accuracy  
+- Local decision making → Based on neighborhood  
 
 ---
 
 ## Choosing the Right K
 
-- Small \( k \) → High variance, sensitive to noise  
-- Large \( k \) → Low variance, may underfit  
+- Small k → High variance, sensitive to noise  
+- Large k → Low variance, may underfit  
 
-Optimal \( k \) is typically selected using cross-validation.
+Optimal k is typically selected using cross-validation.
 
 ---
 
@@ -135,9 +116,9 @@ Optimal \( k \) is typically selected using cross-validation.
 
 ## Limitations
 
-- Computationally expensive at prediction time  
+- Computationally expensive during prediction  
 - Sensitive to feature scaling  
-- Performance depends on \( k \)  
+- Performance depends on k  
 - Affected by noise and outliers  
 
 ---
@@ -154,6 +135,13 @@ Optimal \( k \) is typically selected using cross-validation.
 
 ## Conclusion
 
-KNN is a simple yet powerful algorithm based on **distance-driven similarity**. Its effectiveness depends heavily on **feature scaling**, **distance metric**, and **choice of \( k \)**.
+KNN is a simple yet powerful algorithm based on **distance-driven similarity**. Its effectiveness depends heavily on **feature scaling**, **distance metric**, and **choice of k**.
+
+---
+
+## References
+
+- https://zilliz.com/blog/k-nearest-neighbor-algorithm-for-machine-learning  
+- https://www.xlstat.com/solutions/features/k-nearest-neighbors-knn  
 
 ---
