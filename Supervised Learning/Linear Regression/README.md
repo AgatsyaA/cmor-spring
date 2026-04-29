@@ -1,7 +1,7 @@
 # Linear Regression
 
 <p align="center">
-  <img src="https://miro.medium.com/v2/resize:fit:1400/1*shg3zX_m1Zz3Wz8aH6Kk0A.png" width="600"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Linear_regression.svg" width="600"/>
 </p>
 
 ---
