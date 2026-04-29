@@ -69,6 +69,8 @@ d(x, y) = (Σ |xᵢ − yᵢ|ᵖ)^(1/p)
 ŷ = (Σ wᵢ · yᵢ) / (Σ wᵢ)  
 where wᵢ = 1 / d(x, xᵢ)  
 
+---
+
 ## Methodology
 
 - Classification by proximity (majority voting)  
@@ -139,7 +141,10 @@ KNN is a simple yet powerful algorithm based on **distance-driven similarity**. 
 
 ## References
 
-- https://zilliz.com/blog/k-nearest-neighbor-algorithm-for-machine-learning  
-- https://www.xlstat.com/solutions/features/k-nearest-neighbors-knn  
+- https://scikit-learn.org/stable/modules/neighbors.html  
+- https://developers.google.com/machine-learning/crash-course/classification/knn  
+- https://www.statlearning.com/ (An Introduction to Statistical Learning)  
+- https://link.springer.com/book/10.1007/978-0-387-84858-7 (Elements of Statistical Learning)  
+- https://www.ibm.com/topics/knn  
 
 ---
