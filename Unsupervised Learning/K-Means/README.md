@@ -1,159 +1,205 @@
-# K-Means Clustering
+# DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
 
 <p align="center">
-  <img src="https://miro.medium.com/0*Hx4ndu6ffRy0TtdF.png" width="600"/>
+  <img src="https://ik.imagekit.io/upgrad1/abroad-images/imageCompo/images/img_0_1_86GN1D.png" width="600"/>
 </p>
+
+---
 
 ## Overview
 
-K-Means is a centroid-based unsupervised learning algorithm used to partition data into K distinct clusters. It assigns each data point to the cluster with the nearest centroid, with the goal of minimizing intra-cluster variance.
+**DBSCAN** is a density-based unsupervised learning algorithm used to cluster data points based on **density connectivity**. It groups points that are closely packed together while identifying points in low-density regions as **noise (outliers)**.
 
-It is one of the most widely used clustering algorithms due to its simplicity, efficiency, and scalability.
+Unlike centroid-based methods such as K-Means, DBSCAN does not require specifying the number of clusters in advance and can detect clusters of **arbitrary shapes**.
 
 ---
 
 ## Learning Objectives
 
-- Understand centroid-based clustering  
-- Learn how K-Means forms clusters iteratively  
-- Analyze the impact of K (number of clusters)  
-- Evaluate clustering performance using standard techniques  
+- Understand density-based clustering principles  
+- Learn how DBSCAN identifies clusters and outliers  
+- Analyze the impact of ε (epsilon) and MinPts  
+- Evaluate clustering performance and limitations  
 
 ---
 
 ## Problem Formulation
 
-Given a dataset X = {x₁, x₂, ..., xₙ}, the objective is to partition the data into K clusters:
+Given a dataset:
 
-C = {C₁, C₂, ..., Cₖ}
+X = {x₁, x₂, ..., xₙ}
 
-Such that the following objective is minimized:
-
-Sum of Squared Distances (Inertia):
-
-J = Σ Σ ||x - μⱼ||²
-
-Where:
-- μⱼ is the centroid of cluster Cⱼ  
-- x represents data points assigned to cluster Cⱼ  
-
----
-
-## Algorithm Workflow
-
-1. Initialize K centroids (randomly or using K-Means++)  
-2. Assign each data point to the nearest centroid  
-3. Recompute centroids as the mean of assigned points  
-4. Repeat steps 2 and 3 until convergence:
-   - Centroids do not change significantly  
-   - Maximum iterations reached  
+The objective is to partition the dataset into clusters such that:
+- Points within a cluster are **density-connected**
+- Sparse regions are identified as **noise**
 
 ---
 
 ## Key Concepts
 
-### Centroid
-The mean position of all data points in a cluster.
+### Core Points
+A point x is a **core point** if:
 
-### Inertia (Within-Cluster Sum of Squares)
-Measures how tightly data points are grouped within clusters.
+|Nε(x)| ≥ MinPts
 
-### Convergence
-Occurs when cluster assignments no longer change.
+---
+
+### Border Points
+Points within the ε-neighborhood of a core point but not dense enough to be core points themselves.
+
+---
+
+### Noise Points (Outliers)
+Points that are neither core nor border points.
+
+---
+
+### Density Reachability
+A point y is directly reachable from x if:
+- y ∈ Nε(x)  
+- x is a core point  
+
+---
+
+### Density Connectivity
+Two points are density-connected if there exists a chain of core points linking them.
+
+---
+
+## Parameters
+
+### Epsilon (ε)
+Defines the radius used to determine the neighborhood of a point.
+
+---
+
+### MinPts
+Minimum number of points required to form a dense region.
+
+Proper parameter selection is critical for model performance.
+
+---
+
+## Algorithm Workflow
+
+1. Select an unvisited point  
+2. Retrieve all points within ε  
+3. If neighbors ≥ MinPts:
+   - Mark as core point  
+   - Create a new cluster  
+   - Expand cluster via density reachability  
+4. Else:
+   - Mark as noise (may later become border)  
+5. Repeat until all points are processed  
 
 ---
 
 ## Distance Metrics
 
-K-Means relies on distance calculations, commonly:
-
 - Euclidean Distance  
-- Manhattan Distance (less common)  
+- Manhattan Distance  
+- Cosine Distance  
 
-Euclidean distance is typically used as it aligns with variance minimization.
+Choice of metric significantly affects clustering results.
 
 ---
 
-## Choosing the Optimal K
+## Formulas
 
-### Elbow Method
-Plots inertia against number of clusters (K). The optimal K is at the "elbow point" where the rate of decrease sharply changes.
+### ε-Neighborhood
+
+Nε(x) = { y ∈ X | d(x, y) ≤ ε }
+
+---
+
+### Core Point Condition
+
+|Nε(x)| ≥ MinPts
+
+---
+
+### Euclidean Distance
+
+d(x, y) = √Σ (xᵢ − yᵢ)²  
+
+---
 
 ### Silhouette Score
-Measures how similar a point is to its own cluster compared to other clusters.
+
+S = (b − a) / max(a, b)
+
+Where:  
+- a → Mean intra-cluster distance  
+- b → Mean nearest-cluster distance  
 
 ---
 
 ## Advantages
 
-- Simple and easy to implement  
-- Computationally efficient  
-- Scales well to large datasets  
-- Works well with spherical clusters  
+- No need to specify number of clusters  
+- Detects clusters of arbitrary shape  
+- Robust to noise and outliers  
+- Effective for spatial and density-based data  
 
 ---
 
 ## Limitations
 
-- Requires predefined number of clusters (K)  
-- Sensitive to initial centroid placement  
-- Assumes clusters are spherical and equally sized  
-- Struggles with outliers and noise  
-- Poor performance on non-linear or complex cluster shapes  
+- Sensitive to ε and MinPts  
+- Struggles with varying density clusters  
+- Performance degrades in high-dimensional spaces  
+- Distance metric selection impacts results  
 
 ---
 
-## Improving Performance
+## Parameter Selection Strategy
 
-- Use **K-Means++ initialization** for better centroid selection  
-- Run algorithm multiple times and choose best result  
-- Normalize or standardize features before clustering  
-- Combine with PCA for dimensionality reduction  
+- Use a **k-distance graph** to estimate ε  
+- Set MinPts ≈ dimensionality + 1  
+- Apply feature scaling before clustering  
 
 ---
 
 ## Applications
 
+- Anomaly detection  
+- Geospatial clustering  
 - Customer segmentation  
-- Market analysis  
-- Image compression  
-- Document clustering  
-- Recommendation systems  
+- Image processing  
+- Fraud detection  
 
 ---
 
 ## Evaluation Techniques
 
-- Inertia (Within-cluster variance)  
 - Silhouette Score  
-- Visual inspection (2D/3D projections)  
-- Comparison across multiple K values  
+- Visual inspection  
+- Cluster density validation  
+- Domain-specific evaluation  
 
 ---
 
 ## Practical Considerations
 
 - Feature scaling is essential for distance-based clustering  
-- High dimensionality can affect performance  
-- Sensitive to outliers — preprocessing is important  
-- Initialization significantly impacts results  
+- High dimensionality reduces effectiveness (curse of dimensionality)  
+- PCA can improve clustering performance  
+- Noise handling is a key advantage over centroid-based methods  
 
 ---
 
 ## Implementation in This Repository
 
-This module includes:
-
-- K-Means implementation  
-- Experiments with different K values  
-- Visualization of cluster assignments  
-- Evaluation using inertia and silhouette score  
+- DBSCAN implementation  
+- Parameter tuning experiments  
+- Cluster and noise visualization  
+- Comparison with other clustering methods  
 
 ---
 
 ## Repository Structure
 
-K-Means/
+DBSCAN/
 
 ├── implementation notebooks  
 ├── experiments  
@@ -163,13 +209,19 @@ K-Means/
 
 ## Key Takeaways
 
-- K-Means clusters data based on proximity to centroids  
-- Efficient and scalable for large datasets  
-- Requires careful selection of K  
-- Works best for well-separated, spherical clusters  
+- Clustering is based on **density, not centroids**  
+- Automatically detects **outliers**  
+- Works well for **irregular cluster shapes**  
+- Requires careful parameter tuning  
 
 ---
 
-## Conclusion
+## References
 
-K-Means is a foundational clustering algorithm that provides an efficient way to partition data into meaningful groups. While simple in design, it is highly effective when applied to appropriately structured data and serves as a baseline for more advanced clustering techniques.
+- https://scikit-learn.org/stable/modules/clustering.html#dbscan  
+- https://developers.google.com/machine-learning/clustering/dbscan  
+- https://www.statlearning.com/  
+- https://link.springer.com/book/10.1007/978-0-387-84858-7  
+- https://www.ibm.com/topics/dbscan  
+
+---
