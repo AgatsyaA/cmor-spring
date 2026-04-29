@@ -2,11 +2,13 @@
 
 ![Supervised Learning](https://eleks.com/wp-content/uploads/928Da630_2-2.png)
 
+---
+
 ## Overview
 
 This module focuses on supervised learning, a core paradigm in machine learning where models are trained using labeled data. Each input is associated with a known output, enabling the model to learn a mapping function and generalize to unseen data.
 
-Supervised learning relies on predefined outcomes to guide the training process, distinguishing it from unsupervised approaches where patterns are discovered without labels :contentReference[oaicite:0]{index=0}.
+Supervised learning relies on predefined outcomes to guide the training process, distinguishing it from unsupervised approaches where patterns are discovered without labels.
 
 The objective of this section is to provide both conceptual clarity and practical implementation of widely used supervised learning algorithms, with an emphasis on understanding model behavior, assumptions, and performance trade-offs.
 
@@ -142,6 +144,12 @@ Supervised learning is widely used in:
 
 ---
 
-## Conclusion
+## References
 
-This module provides a structured exploration of supervised learning algorithms with a focus on both theoretical understanding and practical implementation. It serves as a foundation for more advanced topics in machine learning and applied AI.
+- https://scikit-learn.org/stable/supervised_learning.html  
+- https://developers.google.com/machine-learning/crash-course  
+- https://www.statlearning.com/ (An Introduction to Statistical Learning)  
+- https://link.springer.com/book/10.1007/978-0-387-84858-7 (Elements of Statistical Learning)  
+- https://www.ibm.com/topics/supervised-learning  
+
+---
