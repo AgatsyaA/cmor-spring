@@ -27,7 +27,9 @@ The objective of this section is to provide both conceptual clarity and practica
 
 Supervised learning aims to learn a function:
 
-f(X) → y
+<p align="center">
+  <strong>f(X) → y</strong>
+</p>
 
 Where:
 - X represents input features  
