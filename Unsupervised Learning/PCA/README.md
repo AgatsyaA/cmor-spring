@@ -4,19 +4,21 @@
   <img src="https://devopedia.org/images/article/139/4543.1548137789.jpg" width="600"/>
 </p>
 
+---
+
 ## Overview
 
-Principal Component Analysis (PCA) is a dimensionality reduction technique used to transform high-dimensional data into a lower-dimensional space while preserving as much variance as possible.
+**Principal Component Analysis (PCA)** is a dimensionality reduction technique used to transform high-dimensional data into a lower-dimensional space while preserving as much **variance** as possible.
 
-It achieves this by projecting data onto a new set of orthogonal axes (principal components) that capture the maximum variance in descending order.
+It achieves this by projecting data onto a new set of **orthogonal axes (principal components)** that capture maximum variance in descending order.
 
-PCA is widely used for data compression, visualization, noise reduction, and as a preprocessing step for machine learning models.
+PCA is widely used for **data compression, visualization, noise reduction**, and as a preprocessing step for machine learning models.
 
 ---
 
 ## Learning Objectives
 
-- Understand the concept of dimensionality reduction  
+- Understand dimensionality reduction  
 - Learn how PCA transforms data into principal components  
 - Analyze variance explained by each component  
 - Apply PCA for visualization and preprocessing  
@@ -25,29 +27,33 @@ PCA is widely used for data compression, visualization, noise reduction, and as 
 
 ## Problem Formulation
 
-Given a dataset X with high dimensionality, PCA aims to find a transformation:
+Given a dataset:
+
+X ∈ ℝⁿˣᵈ
+
+PCA finds a transformation:
 
 X → Z
 
 Where:
-- Z is a lower-dimensional representation of X  
-- The variance retained in Z is maximized  
+- Z is a lower-dimensional representation  
+- Variance retained in Z is maximized  
 
 ---
 
 ## Key Concepts
 
 ### Variance
-Measures the spread of data. PCA maximizes variance along principal components.
+Measures spread in data. PCA maximizes variance along new axes.
 
 ### Principal Components
-New orthogonal axes formed as linear combinations of original features.
+New orthogonal directions formed as linear combinations of original features.
 
 ### Orthogonality
-Principal components are uncorrelated (independent of each other).
+Principal components are uncorrelated.
 
 ### Explained Variance
-Indicates how much information each principal component retains.
+Quantifies how much information each component retains.
 
 ---
 
@@ -55,10 +61,10 @@ Indicates how much information each principal component retains.
 
 1. Standardize the dataset  
 2. Compute covariance matrix  
-3. Perform eigenvalue decomposition  
-4. Sort eigenvectors by eigenvalues (descending order)  
-5. Select top K eigenvectors  
-6. Project data onto selected components  
+3. Perform eigen decomposition  
+4. Sort components by eigenvalues  
+5. Select top K components  
+6. Project data onto new space  
 
 ---
 
@@ -67,19 +73,61 @@ Indicates how much information each principal component retains.
 1. Normalize or standardize data  
 2. Compute covariance matrix  
 3. Calculate eigenvalues and eigenvectors  
-4. Sort components by importance (variance explained)  
+4. Sort components by variance explained  
 5. Select top K components  
-6. Transform data into reduced dimension  
+6. Transform data  
+
+---
+
+## Formulas
+
+### Mean Centering
+
+X_centered = X − μ  
+
+---
+
+### Covariance Matrix
+
+Σ = (1/n) XᵀX  
+
+---
+
+### Eigenvalue Decomposition
+
+Σv = λv  
+
+Where:  
+- v → Eigenvector (principal component)  
+- λ → Eigenvalue (variance explained)  
+
+---
+
+### Projection (Dimensionality Reduction)
+
+Z = XW  
+
+Where:  
+- W → Matrix of top K eigenvectors  
+- Z → Transformed data  
+
+---
+
+### Explained Variance Ratio
+
+Explained Variance = λᵢ / Σ λⱼ  
 
 ---
 
 ## Choosing Number of Components
 
-### Explained Variance Ratio
-Select components that capture a desired percentage of variance (e.g., 90–95%).
+### Explained Variance Threshold
+Select components capturing ~90–95% variance.
+
+---
 
 ### Scree Plot
-Plot eigenvalues vs component number to identify diminishing returns.
+Plot eigenvalues vs component index to identify diminishing returns.
 
 ---
 
@@ -87,17 +135,17 @@ Plot eigenvalues vs component number to identify diminishing returns.
 
 - Reduces dimensionality effectively  
 - Improves computational efficiency  
-- Removes noise and redundancy  
-- Helps in data visualization (2D/3D projections)  
+- Removes redundancy and noise  
+- Enables visualization (2D/3D)  
 
 ---
 
 ## Limitations
 
 - Assumes linear relationships  
-- Loss of interpretability after transformation  
-- Sensitive to scaling of features  
-- May discard useful low-variance information  
+- Reduces interpretability  
+- Sensitive to feature scaling  
+- May discard useful low-variance signals  
 
 ---
 
@@ -107,7 +155,7 @@ Plot eigenvalues vs component number to identify diminishing returns.
 - Feature extraction  
 - Noise reduction  
 - Image compression  
-- Preprocessing for machine learning models  
+- Preprocessing for ML models  
 
 ---
 
@@ -115,25 +163,23 @@ Plot eigenvalues vs component number to identify diminishing returns.
 
 - Explained variance ratio  
 - Reconstruction error  
-- Visual inspection of transformed data  
+- Visual inspection  
 
 ---
 
 ## Practical Considerations
 
-- Always standardize features before applying PCA  
-- Use PCA before clustering (e.g., K-Means, DBSCAN) for better performance  
-- High-dimensional data benefits significantly from PCA  
-- Interpretation of transformed features can be challenging  
+- Always standardize features before PCA  
+- Combine with clustering (K-Means, DBSCAN) for better results  
+- Effective for high-dimensional datasets  
+- Interpretation of components can be difficult  
 
 ---
 
 ## Implementation in This Repository
 
-This module includes:
-
 - PCA implementation  
-- Visualization of reduced dimensions  
+- Dimensionality reduction visualization  
 - Variance analysis  
 - Integration with clustering algorithms  
 
@@ -151,13 +197,19 @@ PCA/
 
 ## Key Takeaways
 
-- PCA reduces dimensionality while preserving maximum variance  
-- Principal components are orthogonal and ranked by importance  
+- PCA reduces dimensionality while preserving variance  
+- Components are orthogonal and ranked by importance  
 - Useful for preprocessing and visualization  
-- Enhances performance of other ML algorithms  
+- Enhances performance of downstream models  
 
 ---
 
-## Conclusion
+## References
 
-PCA is a fundamental technique for handling high-dimensional data. By transforming data into a lower-dimensional space, it enables efficient computation, better visualization, and improved performance in downstream machine learning tasks.
+- https://scikit-learn.org/stable/modules/decomposition.html#pca  
+- https://developers.google.com/machine-learning/data-prep/transform/normalization  
+- https://www.statlearning.com/  
+- https://link.springer.com/book/10.1007/978-0-387-84858-7  
+- https://www.ibm.com/topics/principal-component-analysis  
+
+---
