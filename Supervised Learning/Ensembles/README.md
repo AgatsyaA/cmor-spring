@@ -8,9 +8,9 @@
 
 ## Overview
 
-This project demonstrates practical implementations of ensemble learning techniques for both regression and classification problems. It also establishes the theoretical foundation using decision trees, which serve as the base learners for most ensemble methods.
+This project demonstrates practical implementations of **ensemble learning techniques** for both regression and classification problems. It also establishes the theoretical foundation using **decision trees**, which serve as the base learners for most ensemble methods.
 
-Ensemble learning improves accuracy, robustness, and generalization by combining multiple models, while decision trees provide the underlying structure for learning complex decision boundaries.
+Ensemble learning improves **accuracy, robustness, and generalization** by combining multiple models, while decision trees provide the underlying structure for learning complex decision boundaries.
 
 ---
 
@@ -22,7 +22,7 @@ Ensemble learning improves accuracy, robustness, and generalization by combining
 
 ### Overview
 
-Decision Trees are a non-parametric supervised learning method used for both classification and regression tasks. They model decision-making processes using a hierarchical tree structure.
+Decision Trees are a **non-parametric supervised learning method** used for both classification and regression tasks. They model decision-making processes using a hierarchical tree structure.
 
 Each internal node represents a feature-based condition, each branch represents an outcome, and each leaf node represents a final prediction.
 
@@ -39,7 +39,7 @@ Each internal node represents a feature-based condition, each branch represents 
 
 ### Problem Formulation
 
-Given input features \( X \) and target variable \( y \), the objective is to learn a function:
+Given input features X and target variable y, the objective is to learn a function:
 
 f(X) → y  
 
@@ -62,15 +62,16 @@ Each root-to-leaf path represents a decision rule.
 
 #### Classification
 
-Gini Impurity  
+**Gini Impurity**  
 Gini = 1 − Σ (pᵢ)²  
 
-Entropy  
+**Entropy**  
 Entropy = − Σ pᵢ log₂(pᵢ)  
 
 #### Regression
 
-Mean Squared Error (MSE)
+**Mean Squared Error (MSE)**  
+MSE = (1/n) Σ (yᵢ − ŷᵢ)²  
 
 ---
 
@@ -120,9 +121,9 @@ Decision trees tend to overfit when deep.
 
 ### Key Concepts
 
-- Bagging reduces variance  
-- Boosting reduces bias  
-- Stacking combines models using meta-learning  
+- **Bagging** reduces variance  
+- **Boosting** reduces bias  
+- **Stacking** combines models using meta-learning  
 
 ---
 
@@ -130,11 +131,11 @@ Decision trees tend to overfit when deep.
 
 Decision Trees are high-variance models. Ensemble methods improve them by:
 
-| Method        | Improvement Mechanism |
-|--------------|----------------------|
-| Bagging      | Reduces variance     |
-| Boosting     | Reduces bias         |
-| Stacking     | Improves prediction  |
+| Method   | Improvement Mechanism |
+|----------|----------------------|
+| Bagging  | Reduces variance     |
+| Boosting | Reduces bias         |
+| Stacking | Improves prediction  |
 
 ---
 
@@ -209,17 +210,12 @@ Decision Trees are high-variance models. Ensemble methods improve them by:
 
 ---
 
-## Technology Stack
+## References
 
-- Python  
-- Scikit-learn  
-- Pandas, NumPy  
-- Matplotlib  
+- https://scikit-learn.org/stable/modules/ensemble.html  
+- https://www.statlearning.com/ (An Introduction to Statistical Learning)  
+- https://link.springer.com/book/10.1007/978-0-387-84858-7 (Elements of Statistical Learning)  
+- https://www.ibm.com/topics/ensemble-learning  
+- https://developers.google.com/machine-learning/crash-course  
 
 ---
-
-## How to Run
-
-```bash
-pip install numpy pandas scikit-learn matplotlib
-jupyter notebook
