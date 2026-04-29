@@ -1,7 +1,7 @@
 # Gradient Descent
 
 <p align="center">
-  <img src="https://miro.medium.com/v2/resize:fit:1400/1*G1vO7t0sX7k3u9Xgq0cT8A.png" width="600"/>
+  <img src="https://miro.medium.com/v2/resize:fit:1400/1*VBBrEABIYoTJ3sBBa5yDkA.png" width="600"/>
 </p>
 
 ---
