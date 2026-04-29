@@ -1,4 +1,4 @@
-# 🌳 Decision Tree
+# Decision Tree
 
 <p align="center">
   <img src="https://www.cfoselections.com/hubfs/when%20to%20use%20a%20decision%20tree%20for%20business%20planning.png" width="600"/>
@@ -6,13 +6,13 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 A **Decision Tree** is a supervised machine learning algorithm used for **classification** and **regression** tasks. It models decisions using a **tree-like structure**, where data is split based on feature conditions to arrive at predictions.
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 - The dataset is split into subsets based on feature values  
 - Each split is chosen to maximize **information gain** or minimize **impurity**  
@@ -20,7 +20,7 @@ A **Decision Tree** is a supervised machine learning algorithm used for **classi
 
 ---
 
-## 🌿 Structure
+## Structure
 
 - **Root Node** → Starting point (entire dataset)  
 - **Decision Nodes** → Feature-based splits  
@@ -29,7 +29,7 @@ A **Decision Tree** is a supervised machine learning algorithm used for **classi
 
 ---
 
-## ⚙️ Key Concepts
+## Key Concepts
 
 - **Entropy** → Measure of randomness  
 - **Information Gain** → Reduction in entropy after split  
@@ -37,14 +37,14 @@ A **Decision Tree** is a supervised machine learning algorithm used for **classi
 
 ---
 
-## 📊 Types of Decision Trees
+## Types of Decision Trees
 
 - **Classification Trees** → Output categorical labels  
 - **Regression Trees** → Output continuous values  
 
 ---
 
-## ✅ Advantages
+## Advantages
 
 - Easy to understand and interpret  
 - Handles both numerical and categorical data  
@@ -53,7 +53,7 @@ A **Decision Tree** is a supervised machine learning algorithm used for **classi
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - Prone to **overfitting**  
 - Sensitive to small changes in data  
@@ -61,7 +61,7 @@ A **Decision Tree** is a supervised machine learning algorithm used for **classi
 
 ---
 
-## 🔧 Common Techniques
+## Common Techniques
 
 - **Pruning** → Reduces overfitting  
 - **Max Depth Control** → Limits tree growth  
@@ -69,11 +69,17 @@ A **Decision Tree** is a supervised machine learning algorithm used for **classi
 
 ---
 
-## 🚀 Applications
+## Applications
 
 - Customer segmentation  
 - Credit risk analysis  
 - Medical diagnosis  
 - Fraud detection  
+
+---
+
+## Summary
+
+Decision Trees are a **powerful and interpretable** model that form the foundation of advanced ensemble methods like **Random Forests** and **Gradient Boosting**.
 
 ---
